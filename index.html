@@ -110,9 +110,9 @@ header>*{pointer-events:auto}
 .tag{font-size:11.5px;font-weight:700;padding:7px 14px;border-radius:99px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.94)}
 .p-actions{display:flex;align-items:center;gap:16px;margin-top:26px;opacity:0;transform:translateY(20px);transition:.7s .52s}
 .panel.active .p-kicker,.panel.active .p-title,.panel.active .p-desc,.panel.active .p-tags,.panel.active .p-actions,.panel.active .clima-hint{opacity:1;transform:none}
-.btn-enter{position:relative;display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:15.5px;padding:17px 30px;border-radius:99px;color:var(--deep);text-decoration:none;background:#fff;box-shadow:0 16px 40px -12px rgba(0,0,0,.45);transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s;overflow:hidden}
-.btn-enter::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(0,0,0,.06) 50%,transparent 70%);transform:translateX(-130%);transition:transform .7s}
-.btn-enter:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 22px 50px -12px rgba(0,0,0,.5)}
+.btn-enter{position:relative;display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:15.5px;padding:17px 30px;border-radius:99px;color:#fff;text-decoration:none;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);box-shadow:0 14px 34px -14px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.24);transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,background .3s,border-color .3s;overflow:hidden}
+.btn-enter::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 24%,rgba(255,255,255,.24) 50%,transparent 76%);transform:translateX(-130%);transition:transform .7s}
+.btn-enter:hover{transform:translateY(-3px) scale(1.02);background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.4);box-shadow:0 20px 44px -16px rgba(0,0,0,.52),inset 0 1px 0 rgba(255,255,255,.3)}
 .btn-enter:hover::after{transform:translateX(130%)}
 .btn-enter .arr{transition:transform .3s}
 .btn-enter:hover .arr{transform:translateX(4px)}
@@ -178,16 +178,13 @@ header>*{pointer-events:auto}
 @keyframes gradFlow{to{background-position:100% 0}}
 .intro-sub{margin:20px auto 0;font-size:clamp(.98rem,1.6vw,1.18rem);color:rgba(255,255,255,.9);max-width:52ch;animation:fadeUp .9s .5s both}
 .intro-sub strong{color:#fff}
-.countdown{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:24px;padding:12px 20px;border-radius:18px;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.5);box-shadow:0 14px 40px -14px rgba(0,0,0,.4);animation:fadeUp .9s .58s both}
-.countdown .cd-label{font-size:13px;font-weight:700;color:var(--ink-dim)}
-.countdown .cd-nums{display:flex;gap:6px}
 .cd-box{min-width:44px;text-align:center;background:linear-gradient(150deg,#1B2130,#39415A);color:#fff;border-radius:10px;padding:6px 6px 4px}
 .cd-box b{display:block;font-family:var(--font-display);font-size:19px;line-height:1.1;font-variant-numeric:tabular-nums}
 .cd-box span{font-size:8.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.65}
 .intro-preview{display:flex;gap:12px;justify-content:center;margin-top:28px;animation:fadeUp .9s .66s both;flex-wrap:wrap}
-.mini{display:flex;align-items:center;gap:10px;padding:10px 18px 10px 12px;border-radius:99px;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.5);color:var(--ink);font-weight:700;font-size:13.5px;cursor:pointer;transition:.3s;box-shadow:0 6px 18px -8px rgba(0,0,0,.3)}
-.mini:hover{transform:translateY(-3px);box-shadow:0 14px 30px -10px rgba(0,0,0,.4)}
-.mini .m-emoji{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:16px;background:var(--mbg)}
+.mini{display:flex;align-items:center;gap:10px;padding:10px 18px 10px 12px;border-radius:99px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.26);color:#fff;font-weight:700;font-size:13.5px;cursor:pointer;transition:.3s;backdrop-filter:blur(14px) saturate(135%);-webkit-backdrop-filter:blur(14px) saturate(135%);box-shadow:0 10px 24px -14px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.18)}
+.mini:hover{transform:translateY(-3px);background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.34);box-shadow:0 16px 32px -14px rgba(0,0,0,.48),inset 0 1px 0 rgba(255,255,255,.22)}
+.mini .m-emoji{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:16px;background:var(--mbg);box-shadow:inset 0 1px 0 rgba(255,255,255,.28)}
 .intro-scroll{margin-top:40px;display:inline-flex;flex-direction:column;align-items:center;gap:9px;color:rgba(255,255,255,.75);font-size:11px;letter-spacing:.22em;text-transform:uppercase;animation:fadeUp 1s .85s both;cursor:pointer;transition:color .3s}
 .intro-scroll:hover{color:#fff}
 .mouse{width:24px;height:38px;border:2px solid currentColor;border-radius:14px;position:relative;opacity:.85}
@@ -235,7 +232,6 @@ header>*{pointer-events:auto}
   .pill-mini{font-size:11px;padding:7px 11px}
   .logo small{display:none}
   .logo{font-size:14.5px}
-  .countdown{padding:10px 14px}
   .cd-box{min-width:40px}
   .intro-preview .mini{font-size:12.5px}
 }
@@ -288,10 +284,6 @@ header>*{pointer-events:auto}
       <span class="saud"><span class="pulse"></span> <span id="saudacao">Olá, Guarapuava</span></span>
       <h1>Um lugar. Todos os sites. <span class="grad">Encontre aqui.</span></h1>
       <p class="intro-sub">Este é o <strong>acervo oficial</strong> da Prefeitura de Guarapuava. Cada deslizada abre um portal com a <strong>prévia ao vivo</strong> de um site. Gostou do que viu? Um toque e você está dentro. 😉</p>
-      <div class="countdown" id="countdown" hidden>
-        <span class="cd-label" id="cdLabel"></span>
-        <span class="cd-nums" id="cdNums"></span>
-      </div>
       <div class="intro-preview" id="minis"></div>
       <div class="intro-scroll" id="introScroll" role="button" tabindex="0" aria-label="Ir para o primeiro portal">
         <div class="mouse"></div>
@@ -326,8 +318,7 @@ header>*{pointer-events:auto}
 <script>
 /* ============================================================
    PORTAIS — para adicionar um site novo, acrescente um objeto
-   em SITES. Portal, bolinha, atalho e contador se ajustam
-   sozinhos. Eventos do countdown ficam em EVENTOS. ✨
+   em SITES. Portal, bolinha e atalhos se ajustam sozinhos. ✨
    ============================================================ */
 const SITES = [
   {
@@ -396,12 +387,6 @@ const SITES = [
     chip: "#E6EEFF"
   }
 
-];
-
-/* eventos futuros — o countdown escolhe o mais próximo ainda por vir */
-const EVENTOS = [
-  { nome: "o fim do Inverno Guarapuava", emoji: "❄️", data: "2026-09-21T18:00:00-03:00" }
-  /* exemplo: { nome: "o FECIN 2027", emoji: "🍺", data: "2027-07-10T17:00:00-03:00" } */
 ];
 
 const $ = s => document.querySelector(s);
@@ -606,29 +591,6 @@ fetch("https://api.open-meteo.com/v1/forecast?latitude=-25.3907&longitude=-51.46
     }
   })
   .catch(() => {});
-
-/* ---------- contagem regressiva ---------- */
-const proximo = EVENTOS
-  .map(e => ({...e, ts: new Date(e.data).getTime()}))
-  .filter(e => e.ts > Date.now())
-  .sort((a, b) => a.ts - b.ts)[0];
-if (proximo){
-  const cd = $("#countdown");
-  cd.hidden = false;
-  $("#cdLabel").textContent = `${proximo.emoji} Faltam para ${proximo.nome}:`;
-  const nums = $("#cdNums");
-  nums.innerHTML = ["dias","horas","min","seg"].map(u => `<span class="cd-box"><b>0</b><span>${u}</span></span>`).join("");
-  const boxes = nums.querySelectorAll("b");
-  (function tickCd(){
-    let diff = Math.max(0, proximo.ts - Date.now()) / 1000;
-    const d = Math.floor(diff / 86400); diff -= d * 86400;
-    const hh = Math.floor(diff / 3600); diff -= hh * 3600;
-    const mm = Math.floor(diff / 60);
-    const ss = Math.floor(diff - mm * 60);
-    [d, hh, mm, ss].forEach((v, i) => boxes[i].textContent = pad(v));
-    setTimeout(tickCd, 1000);
-  })();
-}
 
 /* ---------- entrar no site: círculo que engole a tela ---------- */
 let warping = false;
